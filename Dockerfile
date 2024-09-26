@@ -13,6 +13,7 @@ LABEL COMMIT_SHA=${COMMIT_SHA}
 
 COPY entrypoint.sh /entrypoint.sh
 COPY ./healthcheck /healthcheck
+COPY ./enable_masque_mdm.xml /var/lib/cloudflare-warp/mdm.xml
 
 # install dependencies
 RUN case ${TARGETPLATFORM} in \
